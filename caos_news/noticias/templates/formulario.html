@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Popovers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+  <header class="header">
+       
+    <input type="checkbox" class="header__checkbox" id="open-menu">
+    <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+    <div class="header__logo-container">
+        <img class="header__logo" src="img/logo.png">
+    </div>
+    <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="index.html">Inicio</a></li>
+          <li class="header__nav-item"><a href="#portfolio">Noticias</a></li>
+          <li class="header__nav-item"><a href="#contact">Contactanos</a></li>
+          <li class="header__nav-item"><a href="publicar.html">Publicar</a></li>
+          <li class="header__nav-item"><a href="compra.html">Suscribirse</a></li>
+          <li class="header__nav-item"><a href="formulario.html">Registrarse</a></li>
+        </ul>
+    </nav>
+</header>
+  <h1 class="formularioh1">FORMULARIO DE REGISTRO</h1>
+    <main class="form">
+        <form class="row g-1">
+            <div class="col-md-4">
+              <label for="validationServer01" class="form-label">Nombre</label>
+              <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+              <div class="valid-feedback">
+                Bien
+              </div>
+            </div>
+            <div class="col-md-8">
+              <label for="validationServer02" class="form-label">Apellidos</label>
+              <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+              <div class="valid-feedback">
+                Bien
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationServerUsername" class="form-label">Nombre de Usuario</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                  Campo Obligatorio
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationServer03" class="form-label">Ciudad</label>
+              <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+              <div id="validationServer03Feedback" class="invalid-feedback">
+                Campo Obligatorio
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="validationServer04" class="form-label">Pais</label>
+              <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                <option selected disabled value="">Seleccionar Pais...</option>
+                <option>CHILE</option>
+                <option>ARGENTINA</option>
+                <option>PERU</option>
+              </select>
+              <div id="validationServer04Feedback" class="invalid-feedback">
+                Por favor seleccione un pais valido
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="validationServer05" class="form-label">Codigo Postal</label>
+              <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+              <div id="validationServer05Feedback" class="invalid-feedback">
+                Campo Obligatorio
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+                <label class="form-check-label" for="invalidCheck3">
+                  Acepto los terminos de condicion
+                </label>
+                <div id="invalidCheck3Feedback" class="invalid-feedback">
+                  Puedes leerlos cuando quieras
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Aceptar</button>
+            </div>
+          </form>
+          <a class="btn btn-primary" href="index.html" role="button">Volver al Inicio</a>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="codigo.js"></script>
+    
+</body>
+</html>
