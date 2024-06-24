@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Editar noticias</h1>
+    <br>
+
+
+    <button type="button">
+        <a href="{% url 'noticiasAdd' %}"> Agregar</a>
+    </button>
+    
+    <div id="idMensajes">
+        {% if mensaje %}
+            {{mensaje}}
+        {% endif %}
+    </div>
+    
+    <table>
+        {% if noticias %}
+            <th>Título</th>
+            <th>Reportero</th>
+            <th>Descripción</th>
+            <th>Eliminar</th>
+            <th>Modificar</th>
+            {% for x in noticias %}
+                <tr>
+                    <td>{{ x.titulo }}</td>
+                    <td>{{ x.reportero }}</td>
+                    <td>{{ x.descripcion }}</td>
+                    <td> <a href="{% url 'noticias_del' pk=x.codigo %}">Eliminar</a></td>
+                    <td> <a href="{% url 'noticias_findEdit' pk=x.codigo %}">Modificar</a></td>
+
+                </tr>
+            {% endfor %} 
+        {% endif %}       
+    </table>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#idMensajes").delay(2000).fadeOut("slow");
+        })
+    </script>
+</body>
+</html>
