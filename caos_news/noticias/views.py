@@ -39,6 +39,7 @@ def videojuegos(request):
     return render(request, 'noticias/videojuegos.html')
 
 
+
 def crud(request):
     noticias = Noticia.objects.all()
     context = {'noticias': noticias}

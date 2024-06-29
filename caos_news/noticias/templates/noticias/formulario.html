@@ -24,9 +24,7 @@
     </div>
     <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-item"><a href="index.html">Inicio</a></li>
-          <li class="header__nav-item"><a href="#portfolio">Noticias</a></li>
-          <li class="header__nav-item"><a href="#contact">Contactanos</a></li>
+          <li class="header__nav-item"><a href="{% url 'index' %}">Inicio</a></li>
           <li class="header__nav-item"><a href="{% url 'publicar' %}">Publicar</a></li>
           <li class="header__nav-item"><a href="{% url 'compra' %}">Suscribirse</a></li>
           <li class="header__nav-item"><a href="{% url 'formulario' %}">Registrarse</a></li>

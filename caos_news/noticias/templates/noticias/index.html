@@ -34,6 +34,7 @@
                 <li class="header__nav-item"><a href="{% url 'publicar' %}">Publicar</a></li>
                 <li class="header__nav-item"><a href="{% url 'compra' %}">Suscribirse</a></li>
                 <li class="header__nav-item"><a href="{% url 'formulario' %}">Registrarse</a></li>
+                <li class="header__nav-item"><a href="{% url 'lista_noticias' %}">prueba</a></li>
                 
                 <!--  BOOSTRAP NAVBAR BUSCAR      -->
                 <nav class="buscar">
@@ -131,22 +132,22 @@
     <section class="portfolio" id="portfolio">
         <h2 class="portfolio__title">SECCION DE NOTICIAS</h2>
         <h3>Ver tabla de posiciones de la Premier League 2024 en vivo</h3>
-        <a href="apifutbol.html">click aquí</a>
+        <a href="{% url 'apifutbol' %}">click aquí</a>
         <div class="portfolio__project-container">
             <div class="portfolio__project"> 
-                <a class="portfolio__project-name" href="deporte.html">DEPORTE</a>
+                <a class="portfolio__project-name" href="{% url 'deporte' %}">DEPORTE</a>
             </div>
             <div class="portfolio__project">
-                <a class="portfolio__project-name" href="cine.html">CINE</a>
+                <a class="portfolio__project-name" href="{% url 'cine' %}">CINE</a>
             </div>
             <div class="portfolio__project">
-                <a class="portfolio__project-name" href="musica.html">MUSICA</a>
+                <a class="portfolio__project-name" href="{% url 'musica' %}">MUSICA</a>
             </div>
             <div class="portfolio__project">
-                <a class="portfolio__project-name" href="videojuegos.html">VIDEO JUEGOS</a>
+                <a class="portfolio__project-name" href="{% url 'videojuegos' %}">VIDEO JUEGOS</a>
             </div>
             <div class="portfolio__project">
-                <a class="portfolio__project-name" href="espectaculo.html">ESPECTACULO</a>
+                <a class="portfolio__project-name" href="{% url 'espectaculo' %}">ESPECTACULO</a>
             </div>
             
         </div>
