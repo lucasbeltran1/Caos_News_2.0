@@ -53,17 +53,15 @@ def noticiasAdd(request):
     else:
 
 
-        codigo=request.POST["rut"]
+        codigo=request.POST["codigo"]
         titulo=request.POST['titulo']
         reportero=request.POST['reportero']
         descripcion=request.POST['descripcion']
-        activo="1"
 
         obj=Noticia.objects.create( codigo=codigo,
                                     titulo=titulo,
                                     reportero=reportero,
                                     descripcion=descripcion,
-                                    activo=1
                                     )
         obj.save()
         context={'mensaje' : "Datos guardados..."}
@@ -98,20 +96,18 @@ def noticias_findEdit(request,pk):
             return render(request, 'noticias/noticia_editar.html', context)
         
 def noticiasUpdate(request):
-    if request.methos == "POST":
+    if request.method == "POST":
         #es un POST, por lo tanto, se recuperan los datos del formulario y las graban en una tabla
         codigo=request.POST["codigo"]
         titulo=request.POST['titulo']
         reportero=request.POST['reportero']
         descripcion=request.POST['descripcion']
-        activo="1"
 
         noticia= Noticia()
         noticia.codigo=codigo
         noticia.titulo=titulo
         noticia.reportero=reportero
         noticia.descripcion=descripcion
-        noticia.activo=1
         noticia.save()
 
         context={'mensaje':"Datos actualizados...", 'noticia':noticia}

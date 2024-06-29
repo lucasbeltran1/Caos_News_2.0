@@ -19,7 +19,7 @@
         <input type="checkbox" class="header__checkbox" id="open-menu">
         <label for="open-menu" class="header__open-nav-button" role="button">=</label>
         <div class="header__logo-container">
-            <img class="header__logo" src="img/logo.png">
+            <img class="header__logo" src="{% static 'img/logo.png' %}">
         </div>
         <nav class="header__nav">
             <ul class="header__nav-list">
@@ -68,15 +68,15 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <a class="btn btn-primary" href="index.html" role="button">Ingresar</a>
+                            <input type="submit" name="opcion" value="Agregar">
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="btn btn-primary" href="index.html" role="button">Volver al Inicio</a>
+            <a class="btn btn-primary" href="{% url 'index' %}" role="button">Volver al Inicio</a>
         
     </form> <br> <br>
-    <a href="{% url 'crud' %}"> Volver </a>
+    <a href="{% url 'lista_noticias' %}"> Volver </a>
     <br>
     <div id="idMensajes">
         {% if mensaje %}
