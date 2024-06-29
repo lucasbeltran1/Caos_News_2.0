@@ -33,3 +33,19 @@ def noticiasAdd(request):
         obj.save()
         context={'mensaje' : "Datos guardados..."}
         return render(request, 'publicar.html', context)
+
+def noticias_del(request.pk):
+    context={}
+    try:
+        noticias=Noticia.objects.get(codigo=pk)
+
+        noticia.delete()
+        mensaje="Datos eliminados..."
+        noticias = Noticia.objects.all()
+        context = {'noticias': noticias,    'mensaje': mensaje}
+        return render(request, 'lista_noticias.html', context)
+    except:
+        mensaje="Error, el código no existe..."
+        noticias = Noticia.objects.all()
+        context = {'noticias': noticias,  'mensaje': mensaje}
+        return render(request, 'lista_noticias.html', context)
