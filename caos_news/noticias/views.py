@@ -34,7 +34,7 @@ def noticiasAdd(request):
         context={'mensaje' : "Datos guardados..."}
         return render(request, 'publicar.html', context)
 
-def noticias_del(request.pk):
+def noticias_del(request,pk):
     context={}
     try:
         noticias=Noticia.objects.get(codigo=pk)

@@ -9,6 +9,8 @@ urlpatterns = [
     path('crud', views.crud, name='crud'),
     path('noticiasAdd', views.noticiasAdd, name='noticiasAdd'),
     path('noticias_del/<str:pk>', views.noticias_del, name='noticias_del'),
+    path('noticias_findEdit/<str:pk>', views.noticias_findEdit, name='noticias_findEdit'),
+    
     # Otras rutas de la aplicación noticias
 ]
 
