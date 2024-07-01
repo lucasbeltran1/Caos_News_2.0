@@ -19,7 +19,7 @@
         <input type="checkbox" class="header__checkbox" id="open-menu">
         <label for="open-menu" class="header__open-nav-button" role="button">=</label>
         <div class="header__logo-container">
-            <img class="header__logo" src="static/img/logo.png">
+            <img class="header__logo" src="{% static 'img/logo.png' %}">
         </div>
         <nav class="header__nav">
             <ul class="header__nav-list">
@@ -27,6 +27,7 @@
                 <li class="header__nav-item"><a href="{% url 'publicar' %}">Publicar</a></li>
                 <li class="header__nav-item"><a href="{% url 'compra' %}">Suscribirse</a></li>
                 <li class="header__nav-item"><a href="{% url 'formulario' %}">Registrarse</a></li>
+                <li class="header__nav-item"><a href="{% url 'crud' %}">Iniciar sesión</a></li>
             </ul>
         </nav>
     </header>
@@ -38,7 +39,7 @@
     <form action="{%url 'noticiasUpdate' %}" method="POST">
         {% csrf_token %}
         <div class="form__input-container">
-            <pre>Codigo:                <input type="text" name="codigo" value="{{noticia.codigo}}"  ></pre>
+            <pre>Codigo:                <input type="text" name="codigo" value="{{noticia.codigo}}" readonly ></pre>
         </div>
         <div class="form__input-container">
             <pre>Titulo:                <input type="text" name="titulo"  value="{{noticia.titulo}}" ></pre>
@@ -63,7 +64,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            ¿Esta Seguro de enviar la noticia?, una vez enviada debe esperar 1 hr para ser subida si es validada por nosotros, Gracias
+                            ¿Está seguro de editar la noticia?, una vez enviada debe esperar 1 hr para ser subida si es validada por nosotros, gracias.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -72,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <a class="btn btn-primary" href="index.html" role="button">Volver al Inicio</a>
+            <a class="btn btn-primary" href="{% url 'index' %}" role="button">Volver al Inicio</a>
         
     </form> <br> <br>
     {% endif %}

@@ -67,21 +67,19 @@ def noticiasAdd(request):
         context={'mensaje' : "Datos guardados..."}
         return render(request, 'noticias/publicar.html', context)
 
-def noticias_del(request,pk):
-    context={}
+def noticias_del(request, pk):
+    context = {}
     try:
-        noticias=Noticia.objects.get(codigo=pk)
-
+        noticia = Noticia.objects.get(codigo=pk)  # Cambié 'noticias' a 'noticia'
         noticia.delete()
-        mensaje="Datos eliminados..."
+        mensaje = "Datos eliminados..."
         noticias = Noticia.objects.all()
-        context = {'noticias': noticias,    'mensaje': mensaje}
-        return render(request, 'noticias/lista_noticias.html', context)
-    except:
-        mensaje="Error, el código no existe..."
+        context = {'noticias': noticias, 'mensaje': mensaje}
+    except Noticia.DoesNotExist:
+        mensaje = "Error, el código no existe..."
         noticias = Noticia.objects.all()
-        context = {'noticias': noticias,  'mensaje': mensaje}
-        return render(request, 'noticias/lista_noticias.html', context)
+        context = {'noticias': noticias, 'mensaje': mensaje}
+    return render(request, 'noticias/lista_noticias.html', context)
 
 def noticias_findEdit(request,pk):
 
@@ -90,7 +88,7 @@ def noticias_findEdit(request,pk):
         
         context={'noticia':noticia}
         if noticia:
-            return render(request, 'noticia/noticia_editar.html', context)
+            return render(request, 'noticias/noticia_editar.html', context)
         else:
             context={'mensaje':"Error, el código no existe..."}
             return render(request, 'noticias/noticia_editar.html', context)

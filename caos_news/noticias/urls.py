@@ -18,6 +18,7 @@ urlpatterns = [
     path('publicar/', views.publicar, name='publicar'),
     path('videojuegos/', views.videojuegos, name='videojuegos'),
     path('crud', views.crud, name='crud'),
+    path('crud/', views.crud, name='crud'),
     path('noticiasAdd', views.noticiasAdd, name='noticiasAdd'),
     path('noticias_del/<str:pk>', views.noticias_del, name='noticias_del'),
     path('noticias_findEdit/<str:pk>', views.noticias_findEdit, name='noticias_findEdit'),

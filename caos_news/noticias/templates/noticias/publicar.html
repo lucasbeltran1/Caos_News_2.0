@@ -27,6 +27,7 @@
                 <li class="header__nav-item"><a href="{% url 'publicar' %}">Publicar</a></li>
                 <li class="header__nav-item"><a href="{% url 'compra' %}">Suscribirse</a></li>
                 <li class="header__nav-item"><a href="{% url 'formulario' %}">Registrarse</a></li>
+                <li class="header__nav-item"><a href="{% url 'crud' %}">Iniciar sesión</a></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +40,7 @@
         {% csrf_token %}
 
         <div class="form__input-container">
-            <pre>Codigo:                <input type="text" name="codigo" ></pre>
+            <pre>Codigo:                <input type="text" name="codigo" readonly></pre>
         </div>
         <div class="form__input-container">
             <pre>Titulo:                <input type="text" name="titulo" ></pre>
@@ -76,7 +77,7 @@
             <a class="btn btn-primary" href="{% url 'index' %}" role="button">Volver al Inicio</a>
         
     </form> <br> <br>
-    <a href="{% url 'lista_noticias' %}"> Volver </a>
+    <a href="{% url 'index' %}"> Volver </a>
     <br>
     <div id="idMensajes">
         {% if mensaje %}
