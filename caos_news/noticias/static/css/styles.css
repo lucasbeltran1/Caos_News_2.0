@@ -825,3 +825,42 @@ img {
     display: none; /* Ocultar el enlace "Leer menos" por defecto */
   }
 
+  .lista8 {
+    background-color: #18233f;
+    color: #fff;
+    margin: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    border: 4px solid #000;
+}
+
+.btn_agregar {
+    
+    margin-left: 76%;
+    width: 80px;
+    height: 30px;
+   
+}
+
+.texto3 {
+    background-color: #18233f;
+    color: #fff;
+    margin: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    border: 4px solid #000;
+}
+
+.ocultar {
+    background-color: #ccc6;
+}
